@@ -1,0 +1,90 @@
+
+$item_info_height: 500px
+$p_height: $item_info_height /8
+
+.object
+	position: relative
+	margin: 5vh 0
+	height: auto
+	& div
+		display: inline-block
+	& select
+    
+		appearance: none
+		-moz-appearance: none
+		-webkit-appearance: none
+		// width: 80vw
+		width: 100%
+
+		background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent
+		
+
+		margin: 8px 0
+		padding: 5px 10px
+
+		// padding-right: 35px
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+		text-align: center
+		// float: left
+	& select::-ms-expand  
+		display: none 
+	& .item_info
+		width: 100%
+		height: $item_info_height
+		position: relative
+		& .sup
+			width: 100%
+			height: $p_height
+			position: relative
+		& p
+			position: relative
+			text-align: center
+			margin: 0
+			top: 50%
+			transform: translateY(-50%)
+		& .left
+			width: 30%
+			float: left
+			border-right: dashed $main_color 1px
+			box-sizing: border-box
+		& .right
+			width: 70%
+			float: left
+	// & .Balance
+	// 	position: relative
+	// 	border-bottom: solid $main_color 1px
+	// 	margin-left: 3vw
+	// & .remainder
+	// 	margin-left: 3vw
+	// 	display: inline-block
+	// 	position: relative
+	// 	float: left
+	// & .Quantity
+	// 	width: 40vw
+	// 	height: 28px
+	// 	display: inline-block
+	// 	// margin: 0 1vw
+	// 	margin: 8px 0
+	// 	margin-left: calc(8vw - 2px)
+	// 	position: relative
+	// 	// float: right
+	// 	// right: 5vw
+		
+	// 	& input[type="number"]
+	// 		margin: 0
+	// 		padding: 5px
+	// 		width: 20vw
+	// 		float: right
+	// 		// border: 1px solid rgb(247,118,118)
+	// 		border: 1px solid $main_color
+	// 		background-color: $background_color
+	// 		color: $main_color
+			// border: none
+			// -webkit-box-sizing: border-box
+			// -moz-box-sizing: border-box
+			// box-sizing: border-box
+    // & p
+    //   display: inline-block
+    //   margin: 0

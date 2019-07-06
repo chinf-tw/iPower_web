@@ -1,0 +1,52 @@
+// 變數區域
+// 2px為porder值
+// 目前team_info的width為 94vw - 2px
+// LR_width * 2 + LR_padding * 4 = team_info的width
+$LR_width: calc(40vw - 1px)
+$LR_padding: calc(14vw / 4 - 1px)
+// Int_width + Title_width = LR_width
+$Int_width: calc(20vw - 0.5px)
+$Title_width: 1px
+
+
+// $LeftDiv_height: 100% / 3
+$LeftDiv_height: 100% / 6
+$RightDiv_height: 100% / 8
+$team_info_height: 300px
+
+.team_info
+	position: relative
+	// height: $team_info_height
+	overflow: auto
+	& .left,.right
+		width: $LR_width
+		height: $team_info_height
+		display: inline-block
+		float: left
+		padding: 0 $LR_padding
+
+		// box-sizing: border-box
+		// padding: 1vw
+		& div
+			display: inline-block
+	& .left
+		position: relative
+		// top: -100px
+		border-right: dashed $main_color 1px
+		& div
+			height: $LeftDiv_height
+	& .right
+		& div
+			height: $RightDiv_height
+	& li
+		// text-emphasis: none
+		
+		// 垂直置中
+		display: inline-block
+		position: relative
+		top: 50%
+		transform: translateY(-50%)
+		width: $Int_width
+	& .int
+		// border-bottom: solid $main_color 1px
+		text-align: center

@@ -1,0 +1,48 @@
+@import 'Variables'
+*
+  font-family: 微軟正黑體
+body,html
+  width: 100%
+  height: 100%
+  margin: 0
+  background-color: $background_color
+
+
+.sharePadding
+  padding: 3vw
+.shareTopMargin
+  margin: 5vh 0
+
+// 水平置中
+.ToMiddle
+  position: relative
+  display: inline-block
+  left: 50%
+  transform: translateX(-50%)
+// 垂直置中
+.ToMiddleY
+  position: relative
+  display: inline-block
+  top: 50%
+  transform: translateY(-50%)
+
+.ToMiddleFivty
+  width: 50vw
+  margin: 0 25vw
+  position: relative
+.title
+  position: absolute
+  border: solid $main_color 1px
+  left: 50%
+  transform: translateX(-50%)
+  top: -25px
+  background: $background_color
+  color: $main_color
+  padding: 5px
+  border-radius: 10px
+  z-index: 1
+.FontWhite,li,p
+  color: $main_color
+.borderWhite
+  border: solid $main_color 1px
+  border-radius: 10px

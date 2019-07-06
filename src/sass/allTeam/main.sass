@@ -1,0 +1,53 @@
+@import '../share'
+// 變數區域
+// 2px為porder值
+// 目前team_info的width為 94vw - 2px
+// LR_width * 2 + LR_padding * 4 = team_info的width
+$team_info_width: 46vw
+$LR_padding: 2.5vw
+// $LR_width: $team_info_width /2 - $LR_padding
+$LR_width: 23vw
+// $LR_margin: 1.5vw
+// Int_width + Title_width = LR_width
+$Int_width: 8vw
+$Title_width: 1px
+
+
+// $LeftDiv_height: 100% / 3
+$LeftDiv_height: 100% / 6
+$RightDiv_height: 100% / 8
+$team_info_height: 400px
+
+.team_info
+	position: relative
+	display: inline-block
+	height: $team_info_height
+	width: $team_info_width
+	margin: 3vw 1.8vw
+	& .left,.right
+		width: $LR_width
+		height: $team_info_height
+		display: inline-block
+		float: left
+		padding: 0 $LR_padding
+
+		box-sizing: border-box
+		// padding: 1vw
+		& div
+			display: inline-block
+	& span
+		color: $main_color
+		display: inline-block
+		position: relative
+		top: 50%
+		transform: translateY(-50%)
+		width: $Int_width
+	& .left
+		position: relative
+		// top: -100px
+		border-right: dashed $main_color 1px
+		& div
+			height: $LeftDiv_height
+	& .right
+		& div
+			height: $RightDiv_height

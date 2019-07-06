@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title iPower
+    body
+        #teamName.ToMiddle.FontWhite ?隊
+        //- #Search 各隊資訊
+        .content
+            .team_info.borderWhite
+                //- .title 目前隊伍資訊
+                .left
+                    div
+                        li 金錢
+                        li#money.int 
+                    div
+                        li 能力總和
+                        li#sum.int 
+                    div
+                        li.ability_title0 能力1
+                        li#ability0.int
+                    div
+                        li.ability_title1 能力2
+                        li#ability1.int
+                    div
+                        li.ability_title2 能力3
+                        li#ability2.int
+                    div
+                        li.ability_title3 能力4
+                        li#ability3.int
+                .right
+                    div
+                        li.item_title0 項目1
+                        li#item0.int 
+                    div
+                        li.item_title1 項目2
+                        li#item1.int 
+                    div
+                        li.item_title2 項目3
+                        li#item2.int 
+                    div
+                        li.item_title3 項目4
+                        li#item3.int 
+                    div
+                        li.item_title4 項目5
+                        li#item4.int
+                    div
+                        li.item_title5 項目6
+                        li#item5.int
+                    div
+                        li.item_title6 項目7
+                        li#item6.int
+                    div
+                        li.item_title7 項目8
+                        li#item7.int
+
+            .object.borderWhite.sharePadding
+                .title 物品選擇
+
+                .item_info
+                    .left
+                        .sup
+                            p 未來論壇
+                        .sup
+                            p 暑期菁英
+                        .sup
+                            p 創立社團
+                        .sup
+                            p 企業實習
+                        .sup
+                            p 志工服務
+                        .sup
+                            p 比賽得獎
+                        .sup
+                            p 參加幹訓
+                        .sup
+                            p 考取證照
+                    .right
+                        .sup
+                            p 參加未來論壇，認識各領域菁英
+                                br 
+                                | 社交力&行銷力提升5成
+                        .sup
+                            p 參加暑期菁英密集訓練
+                                br
+                                | 能力全提升2成
+                        .sup
+                            p 擔任創社社長
+                                br
+                                | 創意力&管理力提升3成
+                        .sup
+                            p 投入社會企業實習
+                                br
+                                | 管理力&行銷力提升2成
+                        .sup
+                            p 本學期擔任志工服務
+                                br
+                                | 管理力&創意力提升2成
+                        .sup
+                            p 創意力&管理力提升3成
+                        .sup
+                            p 社交力&創意力提升2成
+                        .sup
+                            p 考取證照 交到新朋友
+                                br
+                                | 管理力&行銷力提升2成
+                select.FontWhite.borderWhite(name="test" id="SelectItem")
+                    option(value="") 請選擇物品
+                    option(value="0")
+                    option(value="1")
+                    option(value="2")
+                    option(value="3")
+                    option(value="4")
+                    option(value="5")
+                    option(value="6")
+                    option(value="7")
+                //- .Quantity
+                    //- input.amount.ToMiddleY(type="number" name="Quantity" placeholder="請輸入數量" id="user_quantity" value=0 onkeypress='return event.charCode >= 48 && event.charCode <= 57')
+                    //- #item_quantity.remainder.FontWhite.ToMiddleY 
+                //- #formula.FontWhite =
+                //- #total.Balance.FontWhite
+                //- .FontWhite 元
+
+            .expected.borderWhite
+                .title 預計變動資訊
+                //- .FontWhite 金錢：1500 -> 1000
+                //- .FontWhite 項目1：3 -> 4
+                #expected_content
+                //- .left
+                //-     div
+                //-         li 金錢
+                //-         li#money_expected.int
+                //-     div
+                //-         li 分數
+                //-         li#fraction_expected.int
+                //-     div                    
+                //-         li 聲望
+                //-         li#prestige_expected.int
+                //- .right
+                //-     div
+                //-         li.item_title0 項目1
+                //-         li#item_expected0.int
+                //-     div
+                //-         li.item_title1 項目2
+                //-         li#item_expected1.int
+                //-     div
+                //-         li.item_title2 項目3
+                //-         li#item_expected2.int
+                //-     div
+                //-         li.item_title3 項目4
+                //-         li#item_expected3.int
+                //-     div
+                //-         li.item_title4 項目5
+                //-         li#item_expected4.int
+                //-     div
+                //-         li.item_title5 項目6
+                //-         li#item_expected5.int
+            .Radar.shareTopMargin
+                canvas(id="myChart")
+            #prompt
+            #sendout.shareTopMargin.ToMiddle 點我送出
+            //- input.shareTopMargin.ToMiddle(type="button", value="送出" id="sendout")
